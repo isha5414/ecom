@@ -1,0 +1,174 @@
+/* 🌸 Page Styling */
+.cart-page {
+  /* background: linear-gradient(135deg, #f4d6e6, #eed0e1); */
+  background: white;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.cart-page h1 {
+  font-size: 50px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  text-align: center;
+  color: #d1265a; /* Dark pink heading */
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+/* 🛒 Cart Items Layout */
+.cart-items {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* 🧾 Individual Cart Item */
+.cart-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px;
+  border-radius: 10px;
+  background: #f4d6e6;
+  border: 1px solid #e3b9c9;
+  color: #333;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cart-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+}
+
+.cart-item img {
+  max-width: 100px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* 📄 Item Details */
+.cart-item-details {
+  flex-grow: 1;
+  margin-left: 20px;
+}
+
+.cart-item-name {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #111;
+  margin-bottom: 5px;
+  transition: color 0.2s ease;
+}
+
+.cart-item-details p {
+  font-size: 1rem;
+  margin: 4px 0;
+  color: #444;
+  transition: color 0.2s ease;
+}
+
+.cart-item-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: inherit;
+  flex-grow: 1;
+}
+
+
+.cart-item-name:hover,
+.cart-item-details p:hover {
+  color: #a61744;
+}
+
+/* 🗑 Trash Icon */
+.remove-icon {
+  color: #d1265a;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: transform 0.2s ease, color 0.3s ease;
+}
+
+.remove-icon:hover {
+  color: #a61744;
+  transform: scale(1.2);
+}
+
+/* 🧮 Summary Section */
+.cart-summary {
+  margin-top: 40px;
+  padding: 20px;
+  text-align: center;
+  border-radius: 15px;
+  /* // background: linear-gradient(135deg, #d1265a, #a61744); */
+  background: white;
+  color: #060606 !important;
+  backdrop-filter: blur(6px);
+}
+
+.cart-summary p {
+  font-size: 1.3rem;
+  margin: 10px 0;
+  color: black;
+}
+
+/* ✅ Place Order Button */
+.place-order {
+  width: 60%;
+  padding: 12px 0;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: rgb(27, 3, 3); 
+   background: #e4aee4;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-top: 25px;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.place-order:hover {
+ background: #b47ba9;;
+  transform: scale(1.05);
+}
+
+/* 📱 Responsive Design */
+@media (max-width: 768px) {
+  .cart-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .cart-item img {
+    margin-bottom: 10px;
+  }
+
+  .cart-item-details {
+    margin-left: 0;
+  }
+
+  .cart-summary {
+    padding: 15px;
+  }
+
+  .place-order {
+    width: 100%;
+    font-size: 1rem;
+  }
+
+  .cart-page h1 {
+    font-size: 2.2rem;
+  }
+
+  .cart-item-name {
+    font-size: 1.4rem;
+  }
+
+  .cart-summary p {
+    font-size: 1.1rem;
+  }
+}
